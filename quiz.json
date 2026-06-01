@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "question": "What is output by the following code: let x = 10; let y = x; y = 20; console.log(x); ?",
+    "options": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ],
+    "correctIndex": 1,
+    "explanation": "Numbers are primitive types and are passed by value. When we assign `y = x`, the value 10 is copied into a new memory location for `y`. Modifying `y` afterwards has no effect on `x`."
+  },
+  {
+    "id": 2,
+    "question": "What is output by the following code: let a = { name: 'Alice' }; let b = a; b.name = 'Bob'; console.log(a.name); ?",
+    "options": [
+      "Alice",
+      "Bob",
+      "undefined",
+      "TypeError"
+    ],
+    "correctIndex": 1,
+    "explanation": "Objects are reference types. When we assign `b = a`, `b` is assigned the memory reference pointer of the object in the heap. Modifying `b.name` mutates the underlying object, so `a.name` also reflects the change."
+  },
+  {
+    "id": 3,
+    "question": "Where are primitive types and references/reference types typically stored in JavaScript engine memory respectively?",
+    "options": [
+      "Primitives in the Heap, Reference Types in the Stack",
+      "Primitives in the Stack, Reference Types in the Heap",
+      "Both are stored in the Stack",
+      "Both are stored in the Heap"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primitives (and the pointers of reference variables) are stored in the Stack, which allows fast access to fixed-size data. The actual values of Reference Types (like objects, arrays) are stored in the Heap, which is designed for dynamic, variable-sized memory allocations."
+  }
+]
